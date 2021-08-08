@@ -1,0 +1,388 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-style: none;
+  z-index: 1;
+  background-image: url("https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80");
+  background-size: cover;
+}
+
+.main {
+  width: 1400px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login-time-weather {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.main-login {
+  width: 95%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-color: rgba(253, 240, 237, 0.4);
+}
+
+#intro {
+  text-align: center;
+  font-size: 78px;
+}
+
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 28px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+#login-form input:focus {
+  outline: none;
+}
+
+#greeting {
+  text-align: center;
+  font-size: 78px;
+}
+
+.time {
+  width: 95%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 12px;
+  border: 1px solid transparent;
+  background-color: rgba(253, 240, 237, 0.4);
+  border-radius: 20px;
+}
+
+#clock {
+  font-size: 78px;
+  text-align: center;
+}
+
+#weather {
+  width: 95%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 30px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-color: rgba(253, 240, 237, 0.4);
+}
+
+#weather div {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 45px;
+}
+
+/* todo-calendar */
+.todo-calendar {
+  width: 75%;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.todo {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mini-calendar {
+  width: 95%;
+  height: 30%;
+  border: 1px solid transparent;
+  background-color: rgba(253, 240, 237, 0.4);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mini-calendar__head {
+  font-size: 28px;
+}
+
+.mini-calendar__date {
+  font-size: 68px;
+}
+
+.mini-calendar__day {
+  font-size: 28px;
+}
+
+.prev, .next, .blank {
+  pointer-events: none;
+}
+
+.todo-form-list {
+  width: 95%;
+  height: 65%;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+  background-color: rgba(253, 240, 237, 0.4);
+  border-radius: 20px;
+}
+
+#todo-form {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-form input {
+  border: none;
+  padding: 10px 0px;
+  font-size: 28px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#todo-form input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#todo-form input:not([type="submit"]) {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+#todo-list {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 20px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#todo-list li::before {
+  display: inline-block;
+  content: "•";
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+#todo-list li {
+  width: 100%;
+  height: 40px;
+  font-size: 28px;
+}
+
+#todo-list li button {
+  margin-left: 10px; 
+  width: 30px;
+  height: 30px;
+  font-size: 28px;
+  color: red;
+  background-color: transparent;
+  border: none;
+}
+
+.calendar {
+  width: 600px;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid transparent;
+  background-color: rgba(253, 240, 237, 0.4);
+  border-radius: 20px;
+}
+
+/* calendar__hearder */
+.calendar__header {
+  width: 600px;
+  height: 50px;
+  position: relative;
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.year-month {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;;
+}
+
+.nav {
+  position: absolute;
+  top: 80%;
+  left: 95%;
+  transform: translate(-95%, -00%);
+  width: 120px;
+  display:flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 35px;
+  height: 35px;
+  font-size: 28px;
+}
+
+/* calendar__Day */
+.calendar__main {
+  width: 100%;
+  font-size: 24px;
+}
+
+.days {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.day {
+  width: calc(100% / 7);
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* calendar__Date */
+.dates {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date {
+  width: calc(100% / 7);
+  height: calc(500px / 6);
+  text-align: center;
+  line-height: calc(500px / 6);
+}
+
+.date:nth-child(7n + 1),
+.day:nth-child(7n + 1) {
+  color: #D13E3E;
+}
+
+.date:nth-child(7n + 7),
+.day:nth-child(7n + 7) {
+  color: #396EE2;
+}
+
+.prev, .next {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.prev:nth-child(7n + 1),
+.next:nth-child(7n + 1) {
+  color: rgba(209, 62, 62, 0.5);
+}
+
+.prev:nth-child(7n + 7),
+.next:nth-child(7n + 7) {
+  color: rgba(57, 110, 226, 0.5);
+}
+
+.today {
+  position: relative;
+}
+
+.today::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: yellow;
+  content: "";
+}
+
+.quote {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#quote {
+  text-align: center;
+}
+
+#quote span:first-child {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+#quote span:last-child {
+  font-size: 24px;
+}

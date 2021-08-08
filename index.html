@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Momentum App</title>
+</head>
+<body>
+  <div class="main">
+    <div class="login-time-weather">
+      <!-- 로그인 -->
+      <div class="main-login">
+        <div class="hidden" id="intro">
+          Hello, Unknown.
+        </div>
+        <form class="hidden" id="login-form">
+          <input
+            type="text"
+            maxlength="10"
+            required
+            placeholder="Enter Your name"
+          >
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+      </div>
+      <!-- 시계 -->
+      <div class="time">
+        <h2 id="clock">00:00:00</h2>
+      </div>
+      <!-- 날씨 -->
+      <div id="weather">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="todo-calendar">
+      <!-- todo -->
+      <div class="todo">
+        <div class="mini-calendar">
+          <div class="mini-calendar__head">
+            <span></span>
+            <span>&nbsp;/&nbsp;</span>
+            <span></span>
+          </div>
+          <div class="mini-calendar__date"></div>
+          <div class="mini-calendar__day"></div>
+        </div>
+        <div class="todo-form-list">
+          <form id="todo-form">
+            <input type="text" placeholder="Write and Enter" required>
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+      <!-- 달력 -->
+      <div class="calendar">
+        <div class="calendar__header">
+          <div class="year-month">
+            <span></span>
+            <span>&nbsp;/&nbsp;</span>
+            <span></span>
+          </div>
+          <div class="nav">
+            <button class="nav-btn-left">
+              <i class="fas fa-angle-left"></i>
+            </button>
+            <button class="nav-btn-home">
+              <i class="fas fa-home"></i>
+            </button>
+            <button class="nav-btn-right">
+              <i class="fas fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="calendar__main">
+          <div class="days">
+            <div class="day">SUN</div>
+            <div class="day">MON</div>
+            <div class="day">TUE</div>
+            <div class="day">WED</div>
+            <div class="day">THU</div>
+            <div class="day">FRI</div>
+            <div class="day">SAT</div>
+          </div>
+          <div class="dates">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 명언 -->
+    <div class="quote">
+      <div id="quote">
+        <span></span>
+        <br>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <script src="./js/greeting.js"></script>
+  <script src="./js/clock.js"></script>
+  <script src="./js/quotes.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/calendar.js"></script>
+</body>
+</html>
